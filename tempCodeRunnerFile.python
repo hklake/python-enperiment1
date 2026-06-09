@@ -1,0 +1,17 @@
+import random
+
+# 1. 生成包含 20 个随机数的列表（假设随机数范围在 1 到 100 之间）
+random_list = [random.randint(1, 100) for _ in range(20)]
+print("原始随机列表:  ", random_list)
+
+# 2. 切片提取前 10 个和后 10 个元素
+part1 = random_list[:10]
+part2 = random_list[10:]
+
+# 3. 分别进行升序和降序排序
+part1.sort()  # 默认升序
+part2.sort(reverse=True)  # 设置 reverse=True 为降序
+
+# 4. 将排序后的两部分重新拼接起来
+final_list = part1 + part2
+print("处理后的列表:  ", final_list)
